@@ -20,9 +20,7 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-# =========================
-# WORKOUT ROUTES
-# =========================
+
 
 @app.route('/workouts', methods=['GET'])
 def get_workouts():
@@ -65,9 +63,7 @@ def delete_workout(id):
     }), 200
 
 
-# =========================
-# EXERCISE ROUTES
-# =========================
+
 
 @app.route('/exercises', methods=['GET'])
 def get_exercises():
@@ -115,9 +111,7 @@ def delete_exercise(id):
     }), 200
 
 
-# =========================
-# WORKOUT EXERCISE ROUTES
-# =========================
+
 
 @app.route(
     '/workouts/<int:workout_id>/exercises/<int:exercise_id>/workout_exercises',
