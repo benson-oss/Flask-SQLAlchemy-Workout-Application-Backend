@@ -23,7 +23,6 @@ class Exercise(db.Model):
             )
         return value
 
-
 class Workout(db.Model):
     __tablename__ = "workouts"
 

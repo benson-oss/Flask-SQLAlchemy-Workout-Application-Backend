@@ -35,7 +35,6 @@ def get_workout(id):
     workout = Workout.query.get_or_404(id)
     return workout_schema.dump(workout), 200
 
-
 @app.route('/workouts', methods=['POST'])
 def create_workout():
 
